@@ -1,0 +1,14 @@
+# RingHealth 鍚庣鏈嶅姟渚濊禆
+flask>=2.3.0
+flask-cors>=4.0.0
+PyJWT>=2.8.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+pandas>=2.0.0
+joblib>=1.3.0
+gunicorn>=21.2.0
+
+# 鏁版嵁搴?鍙€?
+# pymysql>=1.1.0
+# sqlalchemy>=2.0.0
+
