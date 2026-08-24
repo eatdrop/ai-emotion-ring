@@ -1,171 +1,95 @@
-# RingHealth 鏅鸿兘鍋ュ悍鎸囩幆 鈥?鍏ㄦ爤椤圭洰鏋舵瀯
+# 最小可行产品设计 / Minimum Viable Product Design
 
-## 椤圭洰姒傝堪
-**鏄熸灑 (StarPivot)** 鏅鸿兘鍋ュ悍鎸囩幆绯荤粺 - 鍩轰簬蹇冪巼鏁版嵁鐨勬儏缁瘑鍒笌鍋ュ悍鐩戞祴骞冲彴銆?
+## 中文
 
-## 鎶€鏈爤
-| 灞傜骇 | 鎶€鏈€夊瀷 | 璇存槑 |
-|------|----------|------|
-| 绉诲姩绔?灏忕▼搴?| **UniApp + Vue3** | 涓€濂椾唬鐮侊紝瀵煎嚭iOS/Android/寰俊灏忕▼搴?|
-| 鍚庣API | **Python Flask** | RESTful API锛岄泦鎴愭儏缁畻娉曟ā鍨?|
-| 鏁版嵁搴?| **MySQL 8.0** | 鐢ㄦ埛銆佺敓鐗╃壒寰併€佹儏缁垎鏋愭暟鎹?|
-| 鍚庡彴绠＄悊 | **Vue3 + Element Plus** | 鏁版嵁鐪嬫澘銆佺敤鎴风鐞嗐€佽澶囩鐞嗐€佹姤琛?|
-| 钃濈墮鍗忚 | **BLE** | 鏈嶅姟UUID:0BC0, 鍐欑壒寰?0BC1, 閫氱煡鐗瑰緛:0BC2 |
-| 鎯呯华绠楁硶 | **RandomForest** | 骞抽潤/鐒﹁檻/鍏村 涓夊垎绫?|
+### 产品目标
 
-## 绯荤粺鏋舵瀯鍥?
-```
-鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?
-鈹?                     瀹㈡埛绔眰                                鈹?
-鈹? 鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹? 鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹? 鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?             鈹?
-鈹? 鈹? iOS App  鈹? 鈹?Android   鈹? 鈹傚井淇″皬绋嬪簭  鈹? 鈫?UniApp    鈹?
-鈹? 鈹斺攢鈹€鈹€鈹€鈹€鈹攢鈹€鈹€鈹€鈹€鈹? 鈹斺攢鈹€鈹€鈹€鈹€鈹攢鈹€鈹€鈹€鈹€鈹? 鈹斺攢鈹€鈹€鈹€鈹€鈹攢鈹€鈹€鈹€鈹€鈹?             鈹?
-鈹?       鈹?BLE杩炴帴     鈹?         鈹?                          鈹?
-鈹斺攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹尖攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹尖攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹尖攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?
-         鈹?            鈹?         鈹?
-         鈻?            鈻?         鈻?
-鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?
-鈹?                   API 鏈嶅姟灞?(Flask)                        鈹?
-鈹? 鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?       鈹?
-鈹? 鈹?鐢ㄦ埛璁よ瘉API   鈹?鈹?鐢熺墿鐗瑰緛API  鈹?鈹?鎯呯华鍒嗘瀽API   鈹?       鈹?
-鈹? 鈹?璁惧绠＄悊API   鈹?鈹?缁熻鍒嗘瀽API  鈹?鈹?鍚庡彴绠＄悊API   鈹?       鈹?
-鈹? 鈹斺攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?鈹斺攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?鈹斺攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?       鈹?
-鈹? 鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?     鈹?
-鈹? 鈹?           RingHealth Emotion Algorithm           鈹?     鈹?
-鈹? 鈹?      RandomForest Model (200 trees, 11 features) 鈹?     鈹?
-鈹? 鈹斺攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?     鈹?
-鈹斺攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?
-                            鈹?
-                            鈻?
-鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?
-鈹?                    鏁版嵁灞?(MySQL)                          鈹?
-鈹? ls_user_profile | ls_biometric_raw_data |                 鈹?
-鈹? ls_emotion_analysis_result                                 鈹?
-鈹斺攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?
+MVP 用于验证：可穿戴设备采集的生理信号能否通过稳定的数据链路形成个人基线、趋势提示和可执行的健康建议。MVP 不验证医疗诊断能力，也不承诺识别人的真实情绪。
 
-鈹屸攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?
-鈹?                  鍚庡彴绠＄悊绯荤粺 (Vue3)                         鈹?
-鈹? 鏁版嵁鐪嬫澘 鈹?鐢ㄦ埛绠＄悊 鈹?璁惧绠＄悊 鈹?鎯呯华鎶ヨ〃 鈹?绯荤粺璁剧疆        鈹?
-鈹斺攢鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹?
-```
+### 核心用户流程
 
-## 椤圭洰鐩綍缁撴瀯
-```
-ringhealth-app/
-鈹溾攢鈹€ uniapp-client/                  # UniApp 瀹㈡埛绔?(鍓嶇)
-鈹?  鈹溾攢鈹€ pages/
-鈹?  鈹?  鈹溾攢鈹€ index/                  # 棣栭〉 - 蹇冪巼瀹炴椂鏄剧ず+鎯呯华鐘舵€?
-鈹?  鈹?  鈹溾攢鈹€ emotion/                # 鎯呯华鍒嗘瀽璇︽儏椤?
-鈹?  鈹?  鈹溾攢鈹€ device/                 # 鎴掓寚璁惧杩炴帴椤?
-鈹?  鈹?  鈹溾攢鈹€ history/                # 鍘嗗彶鏁版嵁璁板綍椤?
-鈹?  鈹?  鈹溾攢鈹€ profile/                # 涓汉涓績
-鈹?  鈹?  鈹斺攢鈹€ login/                  # 鐧诲綍娉ㄥ唽
-鈹?  鈹溾攢鈹€ components/
-鈹?  鈹?  鈹溾攢鈹€ HeartRateRing.vue       # 蹇冪巼鐜舰鍥捐〃缁勪欢
-鈹?  鈹?  鈹溾攢鈹€ EmotionCard.vue         # 鎯呯华鐘舵€佸崱鐗?
-鈹?  鈹?  鈹溾攢鈹€ BleConnector.vue        # 钃濈墮杩炴帴缁勪欢
-鈹?  鈹?  鈹斺攢鈹€ TrendChart.vue          # 瓒嬪娍鍥捐〃缁勪欢
-鈹?  鈹溾攢鈹€ utils/
-鈹?  鈹?  鈹溾攢鈹€ ble.js                  # BLE钃濈墮鍗忚灏佽
-鈹?  鈹?  鈹溾攢鈹€ api.js                  # API璇锋眰灏佽
-鈹?  鈹?  鈹斺攢鈹€ storage.js              # 鏈湴瀛樺偍宸ュ叿
-鈹?  鈹斺攢鈹€ manifest.json
-鈹?
-鈹溾攢鈹€ server/                         # Python鍚庣鏈嶅姟
-鈹?  鈹溾攢鈹€ app/
-鈹?  鈹?  鈹溾攢鈹€ __init__.py
-鈹?  鈹?  鈹溾攢鈹€ config.py               # 閰嶇疆鏂囦欢
-鈹?  鈹?  鈹溾攢鈹€ models/                 # 鏁版嵁搴撴ā鍨?
-鈹?  鈹?  鈹溾攢鈹€ routes/
-鈹?  鈹?  鈹?  鈹溾攢鈹€ auth.py             # 璁よ瘉璺敱
-鈹?  鈹?  鈹?  鈹溾攢鈹€ biometric.py        # 鐢熺墿鐗瑰緛璺敱
-鈹?  鈹?  鈹?  鈹溾攢鈹€ emotion.py          # 鎯呯华鍒嗘瀽璺敱
-鈹?  鈹?  鈹?  鈹溾攢鈹€ device.py           # 璁惧绠＄悊璺敱
-鈹?  鈹?  鈹?  鈹溾攢鈹€ user.py             # 鐢ㄦ埛绠＄悊璺敱
-鈹?  鈹?  鈹?  鈹斺攢鈹€ admin.py            # 鍚庡彴绠＄悊璺敱
-鈹?  鈹?  鈹斺攢鈹€ services/
-鈹?  鈹?      鈹溾攢鈹€ emotion_service.py  # 鎯呯华绠楁硶鏈嶅姟(瀵规帴ringhealth-emotion)
-鈹?  鈹?      鈹溾攢鈹€ ble_service.py      # BLE鍗忚瑙ｆ瀽
-鈹?  鈹?      鈹斺攢鈹€ stats_service.py    # 缁熻鏈嶅姟
-鈹?  鈹溾攢鈹€ emotion_engine/             # 鎯呯华绠楁硶寮曟搸(浠巖inghealth-emotion-main杩佺Щ)
-鈹?  鈹?  鈹溾攢鈹€ api_server.py
-鈹?  鈹?  鈹溾攢鈹€ feature_engineering.py
-鈹?  鈹?  鈹溾攢鈹€ train_model.py
-鈹?  鈹?  鈹斺攢鈹€ models/
-鈹?  鈹溾攢鈹€ run.py                      # 鍚姩鍏ュ彛
-鈹?  鈹溾攢鈹€ requirements.txt
-鈹?  鈹斺攢鈹€ sql_schema.sql
-鈹?
-鈹溾攢鈹€ admin-panel/                    # Vue3鍚庡彴绠＄悊绯荤粺
-鈹?  鈹溾攢鈹€ src/
-鈹?  鈹?  鈹溾攢鈹€ views/
-鈹?  鈹?  鈹?  鈹溾攢鈹€ dashboard/          # 鏁版嵁鐪嬫澘
-鈹?  鈹?  鈹?  鈹溾攢鈹€ users/              # 鐢ㄦ埛绠＄悊
-鈹?  鈹?  鈹?  鈹溾攢鈹€ devices/            # 璁惧绠＄悊
-鈹?  鈹?  鈹?  鈹溾攢鈹€ emotion/            # 鎯呯华鍒嗘瀽鎶ヨ〃
-鈹?  鈹?  鈹?  鈹斺攢鈹€ settings/           # 绯荤粺璁剧疆
-鈹?  鈹?  鈹溾攢鈹€ components/
-鈹?  鈹?  鈹溾攢鈹€ router/
-鈹?  鈹?  鈹溾攢鈹€ api/
-鈹?  鈹?  鈹斺攢鈹€ stores/
-鈹?  鈹溾攢鈹€ package.json
-鈹?  鈹斺攢鈹€ vite.config.js
-鈹?
-鈹斺攢鈹€ docs/
-    鈹溾攢鈹€ api.md                      # API鎺ュ彛鏂囨。
-    鈹溾攢鈹€ ble-protocol.md             # BLE钃濈墮鍗忚鏂囨。
-    鈹斺攢鈹€ mvp-design.md               # MVP璁捐鏂囨。
-```
+1. 用户或测试人员绑定设备。
+2. 设备采集并上传带时间戳的生理数据。
+3. 后端完成身份校验、数据校验、存储和查询。
+4. 算法基于个体历史数据计算基线、趋势和置信度。
+5. 前端展示数据质量、趋势、解释和建议。
+6. 管理端查看设备、用户、数据质量和系统运行状态。
 
-## 鏍稿績鍔熻兘妯″潡 (MVP)
+### MVP 必须包含
 
-### 1. 瀹㈡埛绔姛鑳?(UniApp)
-- [x] 钃濈墮BLE鎴掓寚璁惧鎼滅储涓庤繛鎺?(UUID: 0BC0)
-- [x] 瀹炴椂蹇冪巼鏁版嵁鎺ユ敹涓庢樉绀?(閫氱煡鐗瑰緛: 0BC2)
-- [x] 鎯呯华鐘舵€佽瘑鍒笌灞曠ず (骞抽潤/鐒﹁檻/鍏村)
-- [x] 鍘嗗彶蹇冪巼/鎯呯华瓒嬪娍鏌ョ湅
-- [x] 涓汉璧勬枡璁剧疆 (骞撮緞/鎬у埆/浣撻噸)
-- [x] 鐢ㄦ埛鐧诲綍/娉ㄥ唽
+- 用户认证和最小权限控制。
+- 设备绑定、解绑、在线状态和数据上传。
+- 心率等基础生理数据的接收、校验、存储和查询。
+- 个人基线与趋势评分，且输出置信度和数据质量。
+- 管理端的数据看板、用户列表、设备列表和趋势报告。
+- 可追踪的接口错误、日志规范和最小测试。
+- 数据脱敏、删除策略和公开仓库安全规则。
 
-### 2. 鍚庣API (Python Flask)
-- [x] `POST /api/v1/auth/login` - 鐧诲綍璁よ瘉
-- [x] `POST /api/v1/auth/register` - 娉ㄥ唽
-- [x] `POST /api/v1/biometric` - 涓婁紶鐢熺墿鐗瑰緛鏁版嵁
-- [x] `POST /api/v1/predict` - 鍗曟潯鎯呯华棰勬祴
-- [x] `GET /api/v1/latest/<uid>` - 鏈€鏂版暟鎹煡璇?
-- [x] `GET /api/v1/history/<uid>` - 鍘嗗彶璁板綍
-- [x] `GET /api/v1/stats` - 缁熻姒傝
-- [x] `GET /api/v1/baseline/<uid>` - 鐢ㄦ埛鍩虹嚎
-- [x] `POST /api/v1/device/bind` - 璁惧缁戝畾
-- [x] JWT Token璁よ瘉涓棿浠?
+### 暂不纳入 MVP
 
-### 3. 鍚庡彴绠＄悊 (Vue3)
-- [x] 鏁版嵁鐪嬫澘 - 鐢ㄦ埛鏁?璁惧鏁?浠婃棩鏁版嵁/鎯呯华鍒嗗竷
-- [x] 鐢ㄦ埛绠＄悊 - 鍒楄〃/鎼滅储/璇︽儏/缂栬緫
-- [x] 璁惧绠＄悊 - 鍦ㄧ嚎鐘舵€?缁戝畾鍏崇郴
-- [x] 鎯呯华鎶ヨ〃 - 鏃堕棿瓒嬪娍/鍒嗗竷缁熻
-- [x] 绯荤粺閰嶇疆
+- 医疗诊断或疾病预测。
+- 在缺少真实合规数据时大规模训练复杂模型。
+- 同时支持大量硬件型号。
+- 复杂会员、支付、社交和内容社区。
+- 未经验证的自动干预或高风险建议。
+- 为比赛展示而制作但无法进入真实用户流程的孤立功能。
 
-## BLE钃濈墮鍗忚 (鎴掓寚杩炴帴)
+### 成功指标
 
-### 杩炴帴鍙傛暟
-| 鍙傛暟 | 鍊?|
-|------|-----|
-| 鏈嶅姟 UUID | `0BC0` |
-| 鍐欏叆鐗瑰緛 UUID | `0BC1` |
-| 閫氱煡鐗瑰緛 UUID | `0BC2` |
-| 蹇冪巼鏁版嵁鎸囦护 | `0x0503` |
+- 设备数据成功入库率。
+- 数据字段和时间戳有效率。
+- API 成功率与延迟。
+- 算法输出覆盖率、稳定性和置信度校准情况。
+- 用户是否理解趋势含义并能采取行动。
+- 关键流程是否能在真实设备上重复演示。
 
-### 鏁版嵁浜や簰娴佺▼
-1. **鎵弿**: 鎼滅储闄勮繎BLE璁惧锛岀瓫閫夋湇鍔UID鍖呭惈0BC0鐨勮澶?
-2. **杩炴帴**: 寤虹珛BLE杩炴帴
-3. **寮€鍚€氱煡**: 璁㈤槄0BC2鐗瑰緛鐨勯€氱煡
-4. **鍙戦€佹寚浠?*: 鍚?BC1鐗瑰緛鍐欏叆`0x0503`璇锋眰蹇冪巼鏁版嵁
-5. **鎺ユ敹鏁版嵁**: 浠?BC2閫氱煡涓В鏋愬績鐜囧€?
+### 当前限制
 
-## 鎯呯华绠楁硶璇存槑
-- **绠楁硶**: RandomForest Classifier (200妫靛喅绛栨爲, 11缁寸壒寰?
-- **杈撳嚭绫诲埆**: calm(骞抽潤) / anxious(鐒﹁檻) / excited(鍏村)
-- **鏍稿績鐗瑰緛**: HRV浠ｇ悊鍊笺€佸熀绾垮亸绂汇€乑-score銆佹椂娈点€佸績鐜囩粷瀵瑰€?
-- **杈撳叆**: user_id + heart_rate + timestamp + 鍙€?gender, age, weight)
+当前仓库提供管理端和后端基础代码。移动端、真实设备固件、完整算法训练流程和生产部署能力尚不能仅凭仓库内容确认，必须作为后续里程碑验证。
 
+## English
+
+### Product goal
+
+The MVP validates whether physiological signals collected by a wearable device can flow through a reliable data pipeline and produce personalized baselines, trend indicators, and actionable health guidance. It does not validate medical diagnosis or claim to identify a person's true emotional state.
+
+### Core user flow
+
+1. A user or tester binds a device.
+2. The device collects and uploads timestamped physiological data.
+3. The backend authenticates, validates, stores, and serves the data.
+4. The algorithm calculates baselines, trends, confidence, and data quality from personal history.
+5. The frontend presents quality, trends, explanations, and suggestions.
+6. The admin console exposes device, user, data-quality, and system status.
+
+### MVP requirements
+
+- User authentication and least-privilege access.
+- Device binding, unbinding, online status, and data upload.
+- Reception, validation, storage, and querying of basic physiological data.
+- Personalized baseline and trend scores with confidence and data-quality indicators.
+- Admin dashboards, user lists, device lists, and trend reports.
+- Traceable API errors, logging conventions, and minimum tests.
+- Data de-identification, deletion rules, and public-repository safety.
+
+### Out of scope for the MVP
+
+- Medical diagnosis or disease prediction.
+- Large-scale complex-model training without compliant real-world data.
+- Simultaneous support for many hardware models.
+- Complex memberships, payments, social features, or content communities.
+- Unvalidated automated interventions or high-risk advice.
+- Isolated demo features that cannot enter a real user workflow.
+
+### Success metrics
+
+- Device-data ingestion success rate.
+- Field and timestamp validity rate.
+- API success rate and latency.
+- Algorithm coverage, stability, and confidence calibration.
+- Whether users understand the trend and can take action.
+- Whether the critical flow can be repeatedly demonstrated with real hardware.
+
+### Current limitations
+
+The repository currently contains an admin console and backend foundation. A mobile client, real device firmware, a complete model-training pipeline, and production deployment cannot be confirmed from the repository alone and must be validated in later milestones.
