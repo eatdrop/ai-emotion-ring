@@ -1,0 +1,11 @@
+# 临时负责人 / Temporary owner
+# 在四位负责人的 GitHub 用户名确定后替换下方 @eatdrop。
+# Replace @eatdrop after the four owners' GitHub usernames are known.
+
+* @eatdrop
+/apps/admin-console/ @eatdrop
+/services/api-server/ @eatdrop
+/ml/ @eatdrop
+/firmware/ @eatdrop
+/data/ @eatdrop
+/docs/ @eatdrop
