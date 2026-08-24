@@ -2,7 +2,7 @@
 
 ## 中文
 
-本规范适用于前端、后端、算法和嵌入式四位负责人，以及后续加入的协作者。
+本规范适用于产品、前端、后端、算法和嵌入式五位负责人，以及后续加入的协作者。产品负责人拥有需求优先级、用户价值、验收标准和版本范围的责任；技术负责人拥有各自领域技术质量的责任。
 
 ### 1. 基本原则
 
@@ -18,6 +18,8 @@
 
 - `main`：可演示、可发布的稳定分支，禁止直接推送。
 - `develop`：日常集成分支。
+- `feature/product-<topic>`
+- `feature/product-<topic>`
 - `feature/frontend-<topic>`
 - `feature/backend-<topic>`
 - `feature/ml-<topic>`
@@ -35,7 +37,8 @@
 - 提供测试证据和回滚方式；
 - 标明接口、Schema、配置、安全和隐私影响；
 - 完成双语文档检查；
-- 获得受影响责任域负责人审核。
+- 获得受影响责任域负责人审核；
+- 用户流程、验收标准或版本范围变化获得产品负责人确认。
 
 禁止将未完成、无法运行或接口未对齐的代码合入 `main`。
 
@@ -49,7 +52,7 @@
 
 ### 5. 评审与完成定义
 
-至少检查正确性、边界条件、性能、安全、隐私、可维护性、可观测性和文档。完成意味着：验收标准通过、必要测试通过、文档同步、无新增敏感信息、可回滚、责任人明确。
+至少检查正确性、边界条件、性能、安全、隐私、可维护性、可观测性和文档。完成意味着：产品负责人确认验收标准通过、必要测试通过、文档同步、无新增敏感信息、可回滚、责任人明确。
 
 ### 6. 文档语言规范
 
@@ -69,7 +72,7 @@
 
 ## English
 
-This guide applies to the four owners—frontend, backend, algorithm, and embedded—and to future contributors.
+This guide applies to the five owners—product, frontend, backend, algorithm, and embedded—and to future contributors. The product owner owns requirement priority, user value, acceptance criteria, and release scope; technical owners own quality in their domains.
 
 ### 1. Core principles
 
@@ -102,7 +105,8 @@ Create an Issue before development and state the goal, scope, acceptance criteri
 - provide test evidence and a rollback method;
 - identify API, schema, configuration, security, and privacy impact;
 - complete the bilingual-documentation check;
-- obtain review from every affected domain owner.
+- obtain review from every affected domain owner;
+- obtain product-owner approval for changes to user flows, acceptance criteria, or release scope.
 
 Do not merge incomplete, non-runnable, or contract-misaligned work into `main`.
 
@@ -116,7 +120,7 @@ Do not merge incomplete, non-runnable, or contract-misaligned work into `main`.
 
 ### 5. Review and definition of done
 
-Review correctness, edge cases, performance, security, privacy, maintainability, observability, and documentation. Done means acceptance criteria pass, required tests pass, documentation is synchronized, no sensitive information was added, rollback is possible, and ownership is clear.
+Review correctness, edge cases, performance, security, privacy, maintainability, observability, and documentation. Done means the product owner confirms the acceptance criteria, required tests pass, documentation is synchronized, no sensitive information was added, rollback is possible, and ownership is clear.
 
 ### 6. Documentation language policy
 
