@@ -4,7 +4,7 @@
 
 ### 评审顺序
 
-1. 需求和范围是否正确。
+1. 产品负责人确认用户价值、需求范围和验收标准。
 2. 接口、数据和兼容性是否一致。
 3. 正常流程、边界条件和失败流程是否正确。
 4. 是否存在安全、隐私和权限问题。
@@ -14,6 +14,7 @@
 
 ### 各域最低测试
 
+- 产品：用户流程、需求覆盖、文案、可理解性和验收场景。
 - 前端：关键组件、路由、加载/空/错误状态和主流程。
 - 后端：认证、权限、参数校验、核心 API、错误码和数据访问。
 - 算法：数据校验、特征、基线、指标、回归和性能。
@@ -31,13 +32,13 @@ P0/P1 未解决不得合并。P2 应在合并前解决或建立明确 Issue。P3
 
 ### 完成定义
 
-代码可运行、验收标准通过、测试证据存在、公共契约已更新、双语文档同步、无敏感信息、监控和错误信息足够、回滚路径明确。
+产品负责人完成产品验收、代码可运行、验收标准通过、测试证据存在、公共契约已更新、双语文档同步、无敏感信息、监控和错误信息足够、回滚路径明确。
 
 ## English
 
 ### Review order
 
-1. Confirm the requirement and scope.
+1. The product owner confirms user value, requirement scope, and acceptance criteria.
 2. Confirm contract, data, and compatibility consistency.
 3. Review happy paths, edge cases, and failure paths.
 4. Review security, privacy, and authorization.
@@ -47,6 +48,7 @@ P0/P1 未解决不得合并。P2 应在合并前解决或建立明确 Issue。P3
 
 ### Minimum tests by domain
 
+- Product: user flows, requirement coverage, copy, comprehensibility, and acceptance scenarios.
 - Frontend: critical components, routing, loading/empty/error states, and main flows.
 - Backend: authentication, authorization, validation, core APIs, error codes, and data access.
 - Algorithm: data validation, features, baselines, metrics, regression, and performance.
@@ -64,4 +66,4 @@ P0/P1 findings block merging. P2 must be fixed or tracked in an explicit Issue. 
 
 ### Definition of done
 
-Code runs, acceptance criteria pass, test evidence exists, shared contracts are updated, bilingual documentation is synchronized, no sensitive information is added, monitoring and errors are sufficient, and rollback is clear.
+The product owner completes product acceptance, code runs, acceptance criteria pass, test evidence exists, shared contracts are updated, bilingual documentation is synchronized, no sensitive information is added, monitoring and errors are sufficient, and rollback is clear.
