@@ -6,6 +6,7 @@
 
 ### 影响范围
 
+- [ ] 产品/需求
 - [ ] 前端
 - [ ] 后端
 - [ ] 算法
@@ -20,6 +21,7 @@
 ### 合并检查
 
 - [ ] 已关联 Issue
+- [ ] 产品负责人已确认用户价值、范围和验收标准（若适用）
 - [ ] 已通过必要测试
 - [ ] 已邀请所有受影响责任域负责人
 - [ ] API、BLE、算法或数据契约已同步
@@ -36,6 +38,7 @@
 
 ### Impact
 
+- [ ] Product/Requirements
 - [ ] Frontend
 - [ ] Backend
 - [ ] Algorithm
@@ -50,6 +53,7 @@
 ### Merge checklist
 
 - [ ] Linked to an Issue
+- [ ] Product owner approved user value, scope, and acceptance criteria when applicable
 - [ ] Required tests pass
 - [ ] All affected domain owners are requested for review
 - [ ] API, BLE, algorithm, or data contracts are synchronized
