@@ -2,6 +2,16 @@
 
 ## 中文
 
+团队采用五个责任域：产品、前端、后端、算法和嵌入式。产品负责人决定“为什么做、给谁做、先做什么、怎样算完成”；技术负责人决定“如何可靠、安全、可维护地实现”。
+
+### 产品负责人
+
+负责 `docs/product` 和产品需求，包括用户研究、问题定义、产品目标、需求优先级、用户流程、验收标准、版本范围、指标和需求变更记录。
+
+交付物：用户画像、场景与痛点、PRD、原型说明、优先级、验收标准、版本计划、用户反馈、竞品与商业假设。
+
+产品负责人可以决定需求价值和优先级，但不能单方面指定具体技术实现、承诺未经技术评估的交付时间，或把医疗诊断作为未经验证的产品结论。
+
 ### 前端负责人
 
 负责 `apps/admin-console`，包括页面、路由、状态、组件、可访问性、接口调用和用户侧错误提示。不得在前端复制后端业务规则、存放密钥，或直接依赖算法和固件内部实现。
@@ -26,15 +36,39 @@
 
 交付物：BLE 协议、数据包样例、模拟器或合成数据、设备测试记录和固件兼容矩阵。
 
+### 决策边界
+
+| 决策 | 主责 | 必须参与 |
+|---|---|---|
+| 用户问题、价值和优先级 | 产品 | 项目负责人、相关技术负责人 |
+| 用户流程和验收标准 | 产品 | 前端、后端 |
+| API 与存储设计 | 后端 | 前端、算法、嵌入式中的受影响方 |
+| 模型方案和评估标准 | 算法 | 产品、后端 |
+| BLE、采样和固件设计 | 嵌入式 | 后端、算法 |
+| 发布范围 | 产品 | 五个责任域 |
+| 发布技术门禁 | 对应技术负责人 | 所有受影响技术域 |
+| 比赛最终取舍与对外承诺 | 项目负责人 | 产品负责人及相关技术负责人 |
+
 ### 共同责任
 
-- 公共契约由受影响角色共同审核。
-- `data` 由后端主责，算法和嵌入式审核数据语义，前端审核展示需求。
-- 安全、隐私、文档和比赛演示不是某一个人的“额外工作”，每个负责人都要对自己的模块负责。
-- 负责人缺席时必须指定代理人，不能让关键 PR 无人审核。
+- 产品验收不能替代技术评审，技术测试也不能替代产品验收。
+- 技术负责人发现需求不可行、风险过高或证据不足时，必须及时提出，不得静默实现。
+- 需求变化必须由产品负责人更新 PRD、验收标准和优先级，再进入开发。
+- `data` 由后端主责；产品定义使用目的，算法和嵌入式审核语义，前端审核展示需求。
+- 安全、隐私、文档和比赛演示由每个负责人对自己的责任域负责。
 - GitHub 用户名确定后，在本文件和 `.github/CODEOWNERS` 中登记。
 
 ## English
+
+The team has five ownership domains: product, frontend, backend, algorithm, and embedded. The product owner decides why to build, for whom, what comes first, and what counts as accepted. Technical owners decide how to implement it reliably, securely, and maintainably.
+
+### Product owner
+
+Owns `docs/product` and product requirements, including user research, problem definition, product goals, priorities, user flows, acceptance criteria, release scope, metrics, and requirement-change records.
+
+Deliverables: personas, scenarios and pain points, PRDs, prototype notes, priorities, acceptance criteria, release plans, user feedback, competitor analysis, and business hypotheses.
+
+The product owner may decide value and priority, but must not unilaterally dictate technical implementation, promise dates without technical assessment, or present unvalidated medical diagnosis as a product conclusion.
 
 ### Frontend owner
 
@@ -60,10 +94,24 @@ Owns `firmware`, including sampling, BLE, device protocols, firmware versions, p
 
 Deliverables: BLE protocol, packet samples, simulator or synthetic data, device test records, and firmware compatibility matrix.
 
+### Decision boundaries
+
+| Decision | Accountable owner | Required participants |
+|---|---|---|
+| User problem, value, and priority | Product | Project lead and affected technical owners |
+| User flow and acceptance criteria | Product | Frontend and backend |
+| API and storage design | Backend | Affected frontend, algorithm, and embedded owners |
+| Model design and evaluation criteria | Algorithm | Product and backend |
+| BLE, sampling, and firmware design | Embedded | Backend and algorithm |
+| Release scope | Product | All five domains |
+| Technical release gates | Relevant technical owner | All affected technical domains |
+| Competition trade-offs and external commitments | Project lead | Product and affected technical owners |
+
 ### Shared responsibilities
 
-- Shared contracts require review by every affected role.
-- `data` is primarily owned by backend; algorithm and embedded review semantics, while frontend reviews presentation needs.
-- Security, privacy, documentation, and competition demos are not one person's extra task. Every owner is accountable within their domain.
-- When an owner is unavailable, name a delegate so critical PRs are not left unreviewed.
+- Product acceptance does not replace technical review, and technical testing does not replace product acceptance.
+- Technical owners must raise infeasibility, excessive risk, or insufficient evidence early rather than silently implementing.
+- Requirement changes require the product owner to update the PRD, acceptance criteria, and priority before development.
+- `data` is backend-owned; product defines purpose, algorithm and embedded review semantics, and frontend reviews presentation.
+- Every owner is accountable for security, privacy, documentation, and competition demos in their domain.
 - Record actual GitHub usernames in this file and `.github/CODEOWNERS` once known.
