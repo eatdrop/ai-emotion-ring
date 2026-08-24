@@ -8,6 +8,7 @@
 
 ### 发布门禁
 
+- 产品负责人确认版本范围、用户流程、文案和验收标准。
 - `main` 构建和核心测试通过。
 - 接口、算法和固件版本兼容。
 - 配置通过环境变量或密钥管理注入。
@@ -37,6 +38,7 @@ Every milestone includes version scope, owners, demo flow, test results, known i
 
 ### Release gates
 
+- The product owner approves release scope, user flows, product copy, and acceptance criteria.
 - `main` builds and critical tests pass.
 - API, algorithm, and firmware versions are compatible.
 - Configuration is injected through environment variables or secret management.
