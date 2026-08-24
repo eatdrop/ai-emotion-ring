@@ -11,6 +11,8 @@
 
 ### 命名
 
+- `feature/product-<topic>`
+- `feature/product-<topic>`
 - `feature/frontend-<topic>`
 - `feature/backend-<topic>`
 - `feature/ml-<topic>`
@@ -30,6 +32,7 @@
 - PR 必须关联 Issue、通过测试、完成自查和双语文档检查。
 - 作者不能作为唯一审批人。
 - 跨域 PR 需要每个受影响域至少一名负责人批准。
+- 用户流程、验收标准、产品文案或版本范围变化需要产品负责人批准。
 - 修改公共契约时，文档提交应早于或与实现同时合并。
 - 使用 squash merge 保持主线清晰，提交标题遵循约定。
 
@@ -67,6 +70,7 @@ Use `type(scope): summary`. Keep titles imperative and concise; avoid labels suc
 - Every PR links an Issue, passes tests, completes self-review, and verifies bilingual documentation.
 - The author cannot be the only approver.
 - Cross-domain PRs require at least one approval from every affected domain.
+- Changes to user flows, acceptance criteria, product copy, or release scope require product-owner approval.
 - Shared-contract documentation must merge before or with implementation.
 - Use squash merge to keep the mainline clear and follow the commit convention.
 
