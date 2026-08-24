@@ -5,14 +5,15 @@
 ### 阅读顺序
 
 1. [贡献与协作规范](../CONTRIBUTING.md)
-2. [团队角色与责任](collaboration/team-roles.md)
-3. [Git 工作流](collaboration/git-workflow.md)
-4. [接口与数据契约](collaboration/interface-contracts.md)
-5. [代码评审与质量](collaboration/code-review-and-quality.md)
-6. [交付、发布与故障处理](collaboration/delivery-release-and-incidents.md)
-7. [沟通与决策记录](collaboration/communication-and-decisions.md)
-8. [仓库结构](architecture/repository-structure.md)
-9. [MVP 设计](mvp-design.md)
+2. [产品负责人工作规范](product/README.md)
+3. [团队角色与责任](collaboration/team-roles.md)
+4. [Git 工作流](collaboration/git-workflow.md)
+5. [接口与数据契约](collaboration/interface-contracts.md)
+6. [代码评审与质量](collaboration/code-review-and-quality.md)
+7. [交付、发布与故障处理](collaboration/delivery-release-and-incidents.md)
+8. [沟通与决策记录](collaboration/communication-and-decisions.md)
+9. [仓库结构](architecture/repository-structure.md)
+10. [MVP 设计](mvp-design.md)
 
 ### 文档维护规则
 
@@ -29,14 +30,15 @@
 ### Reading order
 
 1. [Contribution guide](../CONTRIBUTING.md)
-2. [Team roles and responsibilities](collaboration/team-roles.md)
-3. [Git workflow](collaboration/git-workflow.md)
-4. [Interface and data contracts](collaboration/interface-contracts.md)
-5. [Code review and quality](collaboration/code-review-and-quality.md)
-6. [Delivery, release, and incident handling](collaboration/delivery-release-and-incidents.md)
-7. [Communication and decision records](collaboration/communication-and-decisions.md)
-8. [Repository structure](architecture/repository-structure.md)
-9. [MVP design](mvp-design.md)
+2. [Product owner workflow](product/README.md)
+3. [Team roles and responsibilities](collaboration/team-roles.md)
+4. [Git workflow](collaboration/git-workflow.md)
+5. [Interface and data contracts](collaboration/interface-contracts.md)
+6. [Code review and quality](collaboration/code-review-and-quality.md)
+7. [Delivery, release, and incident handling](collaboration/delivery-release-and-incidents.md)
+8. [Communication and decision records](collaboration/communication-and-decisions.md)
+9. [Repository structure](architecture/repository-structure.md)
+10. [MVP design](mvp-design.md)
 
 ### Documentation maintenance rules
 
