@@ -4,7 +4,7 @@
 
 ### 固定节奏
 
-- 周一：确定本周目标、负责人、接口依赖和验收标准。
+- 周一：产品负责人说明用户目标、优先级和验收标准；技术负责人确认依赖、工作量和风险。
 - 周三：同步进度、阻塞、风险和契约变化。
 - 周五：合并、联调、演示和复盘。
 - 紧急阻塞不等待例会，应立即在 Issue 中通知受影响负责人。
@@ -19,7 +19,7 @@
 
 ### 决策规则
 
-事实和测试结果优先于职位。无法达成一致时，由受影响范围最大的责任人组织决策；涉及产品范围由项目负责人决定，涉及安全和隐私时选择风险更低的方案。临时决策必须注明失效时间和复审日期。
+事实和测试结果优先于职位。无法达成一致时，由受影响范围最大的责任人组织决策；产品价值、需求优先级和验收标准由产品负责人决定；跨团队资源、比赛策略和最终对外承诺由项目负责人决定，涉及安全和隐私时选择风险更低的方案。临时决策必须注明失效时间和复审日期。
 
 所有正式 Markdown 记录必须中英双语。
 
@@ -27,7 +27,7 @@
 
 ### Cadence
 
-- Monday: set weekly goals, owners, contract dependencies, and acceptance criteria.
+- Monday: the product owner presents user goals, priorities, and acceptance criteria; technical owners confirm dependencies, effort, and risk.
 - Wednesday: synchronize progress, blockers, risks, and contract changes.
 - Friday: merge, integrate, demonstrate, and review.
 - Do not wait for a meeting when blocked; notify affected owners in an Issue immediately.
@@ -42,6 +42,6 @@
 
 ### Decision rules
 
-Evidence and test results take priority over title. If agreement is impossible, the owner with the broadest affected scope facilitates the decision. The project lead decides product scope; choose the lower-risk option for security and privacy. Temporary decisions require an expiry and review date.
+Evidence and test results take priority over title. If agreement is impossible, the owner with the broadest affected scope facilitates the decision. The product owner decides product value, requirement priority, and acceptance criteria. The project lead decides cross-team resources, competition strategy, and final external commitments. Choose the lower-risk option for security and privacy. Temporary decisions require an expiry and review date.
 
 All formal Markdown records must be bilingual.
